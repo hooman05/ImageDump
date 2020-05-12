@@ -177,6 +177,7 @@ async def embed(ctx, *, msg):
 
 @bot.command()
 async def changeCol(ctx, role_name, colour):
+    print("test")
     for role in server.roles:
         if role.name == 'role_name':
             # What you want to do.
