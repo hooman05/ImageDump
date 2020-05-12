@@ -175,13 +175,15 @@ async def embed(ctx, *, msg):
 
     await ctx.send(embed = embed)
 
+server = client.get_server('647143387362885638')
+    
 @bot.command()
-async def changeCol(ctx, role_name, colour):
-    ctx.sent("test")
+async def changecol(ctx, role_name, colour):
+    ctx.send("test")
     for role in server.roles:
         if role.name == 'role_name':
             # What you want to do.
-            await client.edit_role(server=server, role=role, colour=colour)
+            await bot.edit_role(server=server, role=role, colour=colour)
             break
 
 bot.run('NjMxODI4NDEyMjkzNTc4NzU4.XaDb_g.gJ4oO4vZjCP_VxOcRhxfcG98s8w')
